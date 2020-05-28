@@ -1,0 +1,111 @@
+/* 
+1. Header / Contacts
+2. Header / Menu
+3. Home Slider
+*/
+
+/* GLOBAL */
+:root {
+  --primary-color: #303030;
+  --secondary-color: #58EDB9;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+/* HEADER / CONTACTS */
+.header {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.contacts {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 30px;
+  background-color: var(--primary-color);
+  opacity: 0.8;
+}
+
+.tel, .mode {
+  position: relative;
+  color: #fff;
+  margin-right: 50px;
+  text-decoration: none;
+}
+
+.tel:before, .mode:before {
+  content: '';
+  position: absolute;
+  left: -30px;
+  top: -1px;
+  width: 18px;
+  height: 20px;
+  background-image: url('./img/support.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.mode:before {
+  width: 20px;
+  background-image: url('./img/clock.svg');
+}
+
+/* HEADER / MENU */
+.menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 75px;
+  background-color: var(--primary-color);
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  width: 30%;
+  font-family: 'Impact', sans-serif;
+  font-size: 36px;
+  padding: 0 0 9px 5px;
+  line-height: 25px;
+  color: #fff;
+}
+
+.ampersand {
+  font-family: 'Georgia', serif;
+  font-size: 64px;
+}
+
+.logo::first-letter, .logo span {
+  color: var(--secondary-color);
+}
+
+nav {
+  width: 70%;
+}
+
+.menu-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  height: 20px;
+  list-style-type: none;
+}
+
+.menu-item:hover {
+  transition: 0.4s ease-in-out;
+  border-bottom: 2px solid var(--secondary-color);
+}
+
+.menu-item a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* HOME SLIDER */
+.home-slider_img {
+  height: 100vh;
+}
