@@ -4,8 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./libs/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="./libs/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" crossorigin="anonymous" defer></script>
   <title>Ceilings Theme</title>
 </head>
 <body>
@@ -16,7 +19,7 @@
     </div>
     <div class="menu">
       <div class="logo">
-        Мат
+        <span>М</span>ат
         <span class="ampersand">&</span>
         <span>Г</span>лянец
       </div>
@@ -32,10 +35,64 @@
   </header>
 
   <!-- HOME SLIDER -->
-  <section class="home-slider">
-
+  <section id="home" class="home-slider">
+    <div class="main-slider owl-carousel">
+      <div class="main-slider_item">  
+        <div class="main-slider_overlay"></div>
+        <div class="main-slider_img" style="background-image: url('./img/ceiling.jpg');"></div>
+        <div class="main-slider_text-container with-stripe">
+          <p>Идеальные натяжные потолки</p>
+          <p class="stripe">за 48 часов</p>
+        </div>
+      </div>
+      <div class="main-slider_item">
+        <div class="main-slider_overlay main-slider_overlay--lighter"></div>
+        <div class="main-slider_img main-slider_img--center" style="background-image: url('./img/colors.jpg');"></div>
+        <div class="main-slider_text-container left-align">
+          <p>Бесконечная палитра</p>
+          <p class="primary-text">Мы предлагаем огромный выбор расцветок и фактур натяжных потолков. У нас вы найдете те цвета, которые не смогли найти у других!</p>
+        </div>
+      </div>
+      <div class="main-slider_item">
+        <div class="main-slider_overlay"></div>
+        <div class="main-slider_img" style="background-image: url('./img/installation.png');"></div>
+      </div>
+      <div class="main-slider_item">
+        <div class="main-slider_overlay"></div>
+        <div class="main-slider_img main-slider_img--center" style="background-image: url('./img/measure-tape.jpg');"></div>
+        <div class="main-slider_text-container typing">
+          <p>Каждый <span class="highlighted">3-й метр</span></p>
+          <p class="typewriter"><span>бесплатно!</span></p>
+      </div>
+    </div>
   </section>
 
-  <script src="main.js"></script>
+  <section id="main" class="home-main">
+    <div class="main_text-container">
+      <h2>Монтаж натяжных <span class="highlighted">потолков</span></h2>
+      <p class="primary-text">Наша компания - лидер на рынке нашего города. Смело обращайтесь к нам для решения любых вопросов. Консультация бесплатна!</p>
+      <button class="btn"><a href="#">Свяжитесь с нами</a></button>
+    </div>
+    <img src="./img/worker.png" alt="Монтажник">
+  </section>
+
+  <section class="form">
+    <h3 class="title">Запишитесь на <span class="highlighted">бесплатный замер</span></h3>
+    <form action="">
+      <div>
+        <input type="text">
+        <span></span>
+        <input type="phone">
+        <span></span>
+      </div>
+      <button type="submit" class="btn btn--uppercase">Записаться</button>
+    </form>
+  </section>
+
+
+  <script src="./libs/OwlCarousel2-2.3.4/dist/owl.carousel.min.js" defer></script>
+  <script src="main.js" defer></script>
+  <script src="main-slider.js" defer></script>
+  
 </body>
 </html>

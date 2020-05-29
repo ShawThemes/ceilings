@@ -14,6 +14,132 @@ body {
   font-family: 'Raleway', sans-serif;
 }
 
+section {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+p.primary-text {
+  font-size: 20px;
+  text-transform: unset;
+  color: var(--primary-color);
+  line-height: 1.5;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 60px;
+  font-weight: bold;
+  letter-spacing: 5px;
+}
+
+h3 {
+  font-size: 45px;
+  letter-spacing: 5px;
+}
+
+
+.btn {
+  border: none;
+  border-radius: 5px;
+  background-color: var(--secondary-color);
+  height: 60px;
+  width: 230px;
+  box-shadow: 0px 1px 32px rgba(48,48,48, .3);
+  margin-top: 40px;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+}
+
+.btn--uppercase {
+  text-transform: uppercase;
+}
+
+.btn a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  line-height: 60px;
+}
+
+.btn a::after {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  opacity: .2;
+  border-radius: 50%;
+  left: -40px;
+  transform: scale(0.2);
+  transition: all ease-in-out .7s;
+  z-index: 1;
+}
+
+.btn:hover a::after {
+  transform: scale(6.5);
+  transition: all ease-in-out .7s;
+}
+
+.btn:active {
+  box-shadow: none;
+}
+
+
+input {
+  border: none;
+  transition: all ease-in-out .7s;
+  outline: transparent;
+  height: 60px;
+  width: 25%;
+  margin: 20px 2% 20px 0;
+  position: relative;
+}
+input:nth-child(2) {
+  margin-right: 0;
+}
+
+input + span {
+  display: inline-block;
+
+}
+input:focus + span {
+  width: 100%;
+}
+input::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 20px;
+  height: 2px;
+  background-color: var(--secondary-color);
+}
+
+
+.highlighted {
+  position: relative;
+}
+.highlighted::after {
+  content: '';
+  display: block;
+  height: 20px;
+  width: calc(100% + 10px);
+  position: absolute;
+  top: 60%;
+  left: -5px;
+  z-index: -1;
+  background-color: var(--secondary-color);
+}
+
+
 /* HEADER / CONTACTS */
 .header {
   font-size: 16px;
@@ -77,6 +203,7 @@ body {
 .ampersand {
   font-family: 'Georgia', serif;
   font-size: 64px;
+  margin: 0 10px;
 }
 
 .logo::first-letter, .logo span {
@@ -95,17 +222,236 @@ nav {
   list-style-type: none;
 }
 
-.menu-item:hover {
-  transition: 0.4s ease-in-out;
-  border-bottom: 2px solid var(--secondary-color);
+.menu-item:hover::before {
+  transition: all 0.5s ease-in-out;
+  width: 100%
 }
 
-.menu-item a {
-  color: #fff;
-  text-decoration: none;
+.menu-item {
+  position: relative;
 }
+
+.menu-item::before {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: -5px;
+  width: 14px;
+  height: 3px;
+  border-radius: 10px;
+  background-color: var(--secondary-color);
+}
+
+
+
 
 /* HOME SLIDER */
-.home-slider_img {
-  height: 100vh;
+section#home {
+  padding: 0;
+}
+.main-slider_item {
+position: relative;
+height: 350px;
+}
+.main-slider_img {
+  width: 100vw;
+  height: 350px;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  position: absolute;
+  z-index: -1;
+}
+.main-slider_img.main-slider_img--center {
+  background-position: center;
+}
+
+.main-slider_overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: var(--primary-color);
+  opacity: .5;
+  z-index: 1;
+}
+.main-slider_overlay--darker {
+  opacity: .8;
+}
+.main-slider_overlay--lighter {
+  opacity: .3;
+}
+
+.main-slider_text-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+}
+
+.main-slider_text-container p:not(.primary-text) {
+  margin: 0;
+  color: #fff;
+  font-size: 60px;
+  text-transform: uppercase;
+}
+.main-slider_text-container.with-stripe {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main-slider_text-container.with-stripe p {
+  font-weight: bold;
+  text-align: center;
+}
+
+.main-slider_text-container p.stripe {
+  line-height: 1.7;
+  width: 100%;
+  background-color: rgba(88, 237, 185, 0.7);
+}
+
+.main-slider_text-container.left-align {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.main-slider_text-container.left-align p {
+  width: 40%;
+  padding-left: 20px;
+}
+
+.main-slider_text-container.left-align p.primary-text {
+  margin-top: 20px;
+  align-self: flex-end;
+}
+
+.main-slider_text-container.typing {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main-slider_text-container.typing p {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}
+
+.typewriter span {
+  display: block;
+  box-sizing: border-box;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid var(--secondary-color); /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 20px auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  font-family: 'Courier New', Courier, monospace;
+  animation: 
+    typing 4s steps(10, end) infinite,
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  0% { width: 0 }
+  60% { width: 100% }
+  100% { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: var(--secondary-color); }
+}
+
+
+
+
+
+
+
+.owl-dots {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+}
+
+.owl-dots > button.owl-dot {
+  height: 5px;
+  width: 10px;
+  background-color: var(--primary-color);
+  margin: 0 5px;
+  opacity: .5;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  transition: all ease-in-out .4s;
+  
+}
+
+.owl-dots > button.owl-dot.active {
+  background-color: var(--secondary-color);
+  opacity: 1;
+  width: 20px;
+  transition: all ease-in-out .4s;
+}
+
+.owl-stage {
+  transition: all ease-in-out 1s !important;
+}
+
+
+
+/* MAIN */
+
+#main {
+  padding-top: 60px;
+  padding-right: 40px;
+  padding-bottom: 90px;
+  box-sizing: border-box;
+  width: 100%;
+position: relative;
+}
+
+.main_text-container {
+  width: 50%;
+  padding-left: 5%;
+  padding-right: 20px;
+}
+
+#main img {
+  width: 30%;
+  margin-right: 60px;
+  position: absolute;
+  top: -60px;
+  right: 0;
+  z-index: 10;
+}
+
+
+
+/* FORM */
+.form {
+  padding-top: 45px;
+  padding-bottom: 45px;
+  background-color: rgba(48,48,48, .1);
+}
+
+.form .title {
+  text-align: center;
+}
+
+.form form {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form div {
+  width: 100%;
+  text-align: center;
 }
