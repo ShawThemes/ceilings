@@ -17,6 +17,7 @@ body {
 section {
   padding-left: 20px;
   padding-right: 20px;
+  box-sizing: border-box;
 }
 
 p.primary-text {
@@ -223,16 +224,12 @@ nav {
   list-style-type: none;
 }
 
-.menu-item:hover::before {
-  transition: all 0.5s ease-in-out;
-  width: 100%
-}
-
 .menu-item {
   position: relative;
 }
 
-.menu-item::before {
+.menu-item::before,
+.features p::before {
   content: '';
   display: block;
   position: absolute;
@@ -243,17 +240,25 @@ nav {
   background-color: var(--secondary-color);
 }
 
+.menu-item:hover::before, 
+.features .achievements-item:hover p::before {
+  transition: all 0.5s ease-in-out;
+  width: 100%
+}
+
 /* HOME SLIDER */
 section#home {
   padding: 0;
 }
 
-.main-slider_item {
+.main-slider_item,
+.about-slider_item {
   position: relative;
   height: 350px;
 }
 
-.main-slider_img {
+.main-slider_img,
+.about-slider_img {
   width: 100vw;
   height: 350px;
   background-repeat: no-repeat;
@@ -267,7 +272,8 @@ section#home {
   background-position: center;
 }
 
-.main-slider_overlay {
+.main-slider_overlay,
+.about-slider_overlay {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -453,7 +459,8 @@ form div {
 }
 
 /* ACHIEVEMENTS */
-.achievements {
+.achievements,
+.features {
   padding-bottom: 45px;
 }
 
@@ -587,4 +594,29 @@ form div {
   margin: 0;
   padding-left: 25px;
   font-size: 17px;
+}
+
+
+
+
+.about {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10% 90px;
+}
+.about-slider_item,
+.about-slider_img {
+  height: 500px;
+}
+
+
+.features img {
+  margin-bottom: 20px;
+}
+
+.features .achievements-item p {
+  position: relative
 }
