@@ -5,5 +5,5 @@ $('.main-slider').owlCarousel({
   margin:1,
   nav:false,
   items: 1,
-  //autoplay: true
+  autoplay: true
 })
