@@ -14,7 +14,7 @@ function countup(className){
       jQuery('.'+className).spincrement({
         from: 1,
         duration: 5000,
-        thousandSeparator: '',
+
       });
     }
   })
