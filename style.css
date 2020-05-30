@@ -768,10 +768,6 @@ footer {
   color:transparent; 
 }
 
-
-
-
-
 .filters-container ul {
   display: flex;
   list-style: none;
@@ -782,7 +778,7 @@ footer {
 li.filter {
   position: relative;
   margin-right: 20px;
-display: inline-block;
+  display: inline-block;
   line-height: 2;
   cursor: pointer;
 }
@@ -825,3 +821,38 @@ display: inline-block;
   position: absolute;
   transition: all ease-out .7s;
 }
+
+/* EMPLOYES */
+.employes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+}
+
+.employes-list {
+  width: 75%;
+  justify-content: space-around;
+}
+
+.employes .employes-text__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.employes-name, .employes-job {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 40px;
+  z-index: 2;
+}
+
+.employes-job {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+
+
