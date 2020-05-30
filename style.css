@@ -793,9 +793,7 @@ display: inline-block;
   overflow: hidden;
   width: 300px;
   height: 200px;
-
-  transition: all ease-out .7s;
-  border: 2px solid #fff;
+  border: 3px solid #fff;
 }
 .gallery-image img{
   width: 300px;

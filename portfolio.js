@@ -85,15 +85,7 @@ var iso = new Isotope( elem, {
   // options
   itemSelector: '.gallery-image',
   layoutMode: 'fitRows',
-  transitionDuration: '0.7s',
-  hiddenStyle: {
-    opacity: 0,
-    transform: 'scale(0.01)'
-  },
-  visibleStyle: {
-    opacity: 1,
-    transform: 'scale(1)'
-  }
+  transitionDuration: '0.7s'
 });
 
 
