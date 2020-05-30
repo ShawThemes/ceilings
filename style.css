@@ -44,6 +44,10 @@ h3 {
   letter-spacing: 5px;
 }
 
+.center-title {
+  text-align: center;
+}
+
 .btn {
   border: none;
   border-radius: 5px;
@@ -459,9 +463,7 @@ section#home {
   background-color: rgba(48,48,48, .1);
 }
 
-.form .title {
-  text-align: center;
-}
+
 
 .form form {
   display: flex;
@@ -771,6 +773,10 @@ footer {
 
 
 
+.portfolio {
+  min-height: 100vh;
+  margin-bottom: 100px;
+}
 
 .filters-container ul {
   display: flex;

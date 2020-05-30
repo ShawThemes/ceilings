@@ -94,6 +94,8 @@ filters.addEventListener('click', event => {
   if (!event.target.classList.contains('filter')) {
     return;
   }
+  Array.from(filters.children).forEach(el => el.classList.remove('active'));
+  event.target.classList.add('active');
   if (event.target.dataset.tag === 'all') {
     iso.arrange({filter: '*'});
     return;
