@@ -23,8 +23,8 @@ jQuery(function() {
   countup("count", $(".count").text());
 });
 
-/* PARALLAX EFFECT */
-const image = document.querySelector('.work-bcg__image');
-new simpleParallax(image, {
+/* PARALLAX EFFECT FOR HOME SECTION */
+const workSectionBanner = document.querySelector('.work-bcg__image');
+new simpleParallax(workSectionBanner, {
   scale: 1.8
 });

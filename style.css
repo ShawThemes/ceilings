@@ -498,11 +498,23 @@ form div {
   width: 20%;
   text-align: center;
   line-height: 0;
+  perspective: 550px;
+  transform-style: preserve-3d;
 }
 
 .achievements-img {
   width: 100px;
   height: 100px;
+  animation: notransform 2s infinite;
+}
+
+.achievements-item:hover .achievements-img{
+  transform: rotateY(360deg);
+  animation-delay: 1s;
+}
+
+@keyframes notransform {
+  50% { transform: none; }
 }
 
 .achievements-item .primary-text {
@@ -576,6 +588,7 @@ form div {
 .services-list {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin-top: 70px;
 }
 
@@ -615,9 +628,6 @@ form div {
   font-size: 17px;
 }
 
-
-
-
 .about {
   width: 100%;
   display: flex;
@@ -639,8 +649,6 @@ form div {
 .features .achievements-item p {
   position: relative
 }
-
-
 
 .tools-container {
   position: relative;
