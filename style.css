@@ -67,6 +67,8 @@ h3 {
   width: 100%;
   height: 100%;
   line-height: 60px;
+  position: relative;
+  z-index: 2;
 }
 
 .btn .ripple {
@@ -187,29 +189,41 @@ input::after {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 75px;
+  height: 85px;
   background-color: var(--primary-color);
 }
 
+.logo-container {
+  width:30%;
+
+}
 .logo {
   display: flex;
   justify-content: center;
-  width: 30%;
   font-family: 'Impact', sans-serif;
-  font-size: 36px;
+  font-size: 40px;
   padding: 0 0 9px 5px;
   line-height: 25px;
   color: #fff;
+  transform: translateX(-8px);
 }
 
 .ampersand {
   font-family: 'Georgia', serif;
-  font-size: 64px;
+  font-size: 55px;
   margin: 0 10px;
 }
 
 .logo::first-letter, .logo span {
   color: var(--secondary-color);
+}
+
+.site-description {
+  color: #fff;
+  text-transform: uppercase;
+text-align: center;
+font-size: 16px;
+padding-top: 5px;
 }
 
 nav {
@@ -229,7 +243,8 @@ nav {
 }
 
 .menu-item::before,
-.features p::before {
+.features p::before,
+.filter::before {
   content: '';
   display: block;
   position: absolute;
@@ -241,7 +256,10 @@ nav {
 }
 
 .menu-item:hover::before, 
-.features .achievements-item:hover p::before {
+.menu-item.current-page::before,
+.features .achievements-item:hover p::before,
+.filter:hover::before,
+.filter.active::before {
   transition: all 0.5s ease-in-out;
   width: 100%
 }
@@ -425,7 +443,7 @@ section#home {
 
 #main img {
   width: 30%;
-  height: 112%;
+  height: 105%;
   margin-right: 60px;
   object-fit: contain;
   position: absolute;
@@ -504,9 +522,9 @@ form div {
 
 .work-bcg__image {
   object-fit: cover;
-  object-position: top;
+  object-position: center;
   width: 100vw;
-  height: 600px;
+  height: 500px;
 }
 
 .work-overlay {
@@ -621,6 +639,29 @@ form div {
 .features .achievements-item p {
   position: relative
 }
+
+
+
+.tools-container {
+  position: relative;
+  background: #fff;
+  height: 500px;
+  width: 100vw;
+  overflow: hidden;
+}
+.tools-parallax {
+  position: absolute;
+}
+.tools-parallax:nth-child(1) {
+  z-index: 10;
+}
+.tools-parallax:nth-child(2) {
+  z-index: 20;
+}
+.tools-parallax:nth-child(3) {
+  z-index: 30;
+}
+
 /* FOOTER */
 footer {
   display: flex;
@@ -719,3 +760,60 @@ footer {
   color:transparent; 
 }
 
+
+
+
+
+.filters-container ul {
+  display: flex;
+  list-style: none;
+  width: 100%;
+  justify-content: center;
+}
+
+li.filter {
+  position: relative;
+  margin-right: 20px;
+display: inline-block;
+  line-height: 2;
+  cursor: pointer;
+}
+
+.gallery-container ul {
+  list-style: none;
+  position: relative;
+  min-height: 400px;
+  text-align: center;
+}
+
+.gallery-image {
+  overflow: hidden;
+  width: 300px;
+  height: 200px;
+  display: inline-block;
+  transform: scale(1);
+  transform-origin: 0 100%;
+  transition: all ease-out .7s;
+  
+  position: relative;
+}
+.gallery-image img{
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  transition: all ease-out .5s;
+  cursor: pointer;
+  filter: grayscale(70%);
+}
+
+.gallery-image img:hover {
+  transform: scale(1.1);
+  filter: grayscale(0);
+}
+
+.gallery-image.hidden {
+  transform: scale(0.8) translateX(400px);
+  opacity: 0;
+  position: absolute;
+  transition: all ease-out .7s;
+}
