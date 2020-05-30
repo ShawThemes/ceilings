@@ -10,7 +10,6 @@ function countup(className){
   jQuery(window).scroll( function (){
     if(show && (achievements < $(window).scrollTop() + windowHeight)){ 
       show = false;
-          
       jQuery('.'+className).spincrement({
         from: 1,
         duration: 5000,
