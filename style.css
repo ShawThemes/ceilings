@@ -60,6 +60,7 @@ h3 {
   overflow: hidden;
   color: #fff;
   outline: transparent;
+  cursor: pointer;
 }
 
 .btn--uppercase {
@@ -208,9 +209,9 @@ input:nth-child(2) {
 .site-description {
   color: #fff;
   text-transform: uppercase;
-text-align: center;
-font-size: 16px;
-padding-top: 5px;
+  text-align: center;
+  font-size: 16px;
+  padding-top: 5px;
 }
 
 nav {
@@ -430,7 +431,7 @@ section#home {
 
 #main img {
   width: 30%;
-  height: 105%;
+  height: 110%;
   margin-right: 60px;
   object-fit: contain;
   position: absolute;
@@ -445,8 +446,6 @@ section#home {
   padding-bottom: 45px;
   background-color: rgba(48,48,48, .1);
 }
-
-
 
 .form form {
   display: flex;
@@ -637,11 +636,11 @@ background-color: var(--secondary-color);
   align-items: center;
   padding: 0 10% 90px;
 }
+
 .about-slider_item,
 .about-slider_img {
   height: 500px;
 }
-
 
 .features img {
   margin-bottom: 20px;
@@ -666,7 +665,6 @@ background-color: var(--secondary-color);
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 .tools .btn {
@@ -677,18 +675,22 @@ background-color: var(--secondary-color);
   position: relative;
   background: #fff;
   height: 500px;
-  width: 100vw;
+  width: 100%;
   overflow: hidden;
 }
+
 .tools-parallax {
   position: absolute;
 }
+
 .tools-parallax:nth-child(1) {
   z-index: 1;
 }
+
 .tools-parallax:nth-child(2) {
   z-index: 2;
 }
+
 .tools-parallax:nth-child(3) {
   z-index: 3;
 }
@@ -791,9 +793,7 @@ footer {
   color:transparent; 
 }
 
-
-
-
+/* PORTFOLIO */
 .portfolio {
   min-height: 100vh;
   margin-bottom: 100px;
@@ -802,7 +802,6 @@ footer {
 .filters-container ul {
   display: flex;
   list-style: none;
-  width: 100%;
   justify-content: center;
 }
 
@@ -813,8 +812,6 @@ li.filter {
   line-height: 2;
   cursor: pointer;
 }
-
-
 
 .gallery-image {
   overflow: hidden;
@@ -843,7 +840,7 @@ li.filter {
   transition: all ease-out .7s;
 }
 
-/* employees */
+/* EMPLOYEES */
 .employees {
   display: flex;
   flex-direction: column;
@@ -922,4 +919,110 @@ li.filter {
 
 .card-text {
   margin: 0;
+}
+
+/* CONTACTS */
+.contacts-banner {
+  position: relative;
+  padding: 0;
+}
+
+.contacts-img {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 300px;
+  background-image: url('./img/black-textile-41949.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contacts-banner h2, 
+.contacts-banner span  {
+  margin: 80px 0 0;
+  color: #fff;
+  z-index: 2;
+}
+
+.contacts-banner .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-color);
+  opacity: .5;
+  z-index: 1;
+}
+
+.contacts-section {
+  padding: 0;
+  padding: 100px 0;
+}
+
+.contacts-section_container {
+  display: flex;
+}
+
+.contacts-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.img-container {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+}
+
+.contacts-item img {
+  width: 40px;
+  height: 40px;
+  padding: 20px;
+}
+
+.contacts-item a {
+  color: var(--primary-color);
+  line-height: 25px;
+}
+
+.contacts-item p:nth-child(3) {
+  width: 90%;
+  margin: 5px 0 0;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+.contacts_whatsapp, 
+.contacts_viber {
+  position: relative;
+  margin-left: 20px;
+}
+
+.contacts_whatsapp:before,
+.contacts_viber:before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 3px;
+  right: 135px;
+  background-image: url('./img/whatsapp.svg');
+}
+
+.contacts_viber:before {
+  background-image: url('./img/viber.svg');
+}
+
+/* MAP */
+.map {
+  height: 400px;
+  padding: 0;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
 }
