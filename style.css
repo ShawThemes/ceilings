@@ -652,6 +652,28 @@ form div {
   position: relative
 }
 
+.tools {
+  padding: 0;
+  margin-top: 100px;
+  position: relative;
+}
+
+.tools_btn-container {
+  position: absolute;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.tools .btn {
+  z-index: 10;
+}
+
 .tools-container {
   position: relative;
   background: #fff;
@@ -663,13 +685,13 @@ form div {
   position: absolute;
 }
 .tools-parallax:nth-child(1) {
-  z-index: 10;
+  z-index: 1;
 }
 .tools-parallax:nth-child(2) {
-  z-index: 20;
+  z-index: 2;
 }
 .tools-parallax:nth-child(3) {
-  z-index: 30;
+  z-index: 3;
 }
 
 /* FOOTER */
@@ -867,11 +889,31 @@ li.filter {
 
 .card {
   display: flex;
+  width: 35%;
+  margin-top: 40px;
+}
+.card:nth-child(2n+1) {
+  margin-right: 30px;
 }
 
 .number {
-  font-size: 24px;
-  font-weight: 800;
+  font-size: 36px;
+  line-height: 2;
+  font-weight: bold;
+  position: relative;
+  z-index: 1;
+}
+
+.number::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+  transform: translate(-20px, -65px);
+  position: relative;
+  z-index: -1;
 }
 
 .card-title {
@@ -880,6 +922,5 @@ li.filter {
 }
 
 .card-text {
-  width: 80%;
   margin: 0;
 }
