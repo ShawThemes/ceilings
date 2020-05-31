@@ -802,7 +802,6 @@ footer {
 .filters-container ul {
   display: flex;
   list-style: none;
-  width: 100%;
   justify-content: center;
 }
 
