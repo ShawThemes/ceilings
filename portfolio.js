@@ -101,6 +101,3 @@ filters.addEventListener('click', event => {
   }
   iso.arrange({filter: '.' + event.target.dataset.tag});
 });
-
-/* PORTFOLIO POSITIONING */
-imgs.forEach(el => { el.style.left = '27px'; });
