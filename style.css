@@ -114,8 +114,6 @@ input:nth-child(2) {
   margin-right: 0;
 }
 
-
-
 .highlighted {
   position: relative;
 }
@@ -133,9 +131,10 @@ input:nth-child(2) {
 }
 
 /* HEADER / CONTACTS */
-.header {
-  font-size: 16px;
-  font-weight: 400;
+header {
+  position: sticky;
+  top: -2em;
+  z-index: 99;
 }
 
 .contacts {
@@ -1070,7 +1069,7 @@ li.filter {
 }
 
 .contacts-item p:first-of-type {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .contacts-item p:nth-child(3) {
@@ -1080,20 +1079,18 @@ li.filter {
   color: var(--primary-color);
 }
 
-.contacts_whatsapp, 
 .contacts_viber {
-  position: relative;
-  margin-left: 20px;
+  margin-top: 5px;
 }
 
 .contacts_whatsapp:before,
 .contacts_viber:before {
   content: '';
+  display: inline-block;
   width: 20px;
   height: 20px;
-  position: absolute;
-  top: 3px;
-  right: 135px;
+  margin-right: 10px;
+  vertical-align: middle;
   background-image: url('./img/whatsapp.svg');
 }
 
