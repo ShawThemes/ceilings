@@ -34,7 +34,12 @@
     width: 100%;
   }
   .logo {
+    font-size: 30px;
     padding-left: 15px;
+  }
+  .ampersand {
+    font-size: 45px;
+    margin: 0 5px;
   }
 
   /* HOME-SLIDER */
@@ -65,6 +70,10 @@
     font-size: 30px;
     letter-spacing: 1px;
     line-height: unset;
+  }
+  .main_text-container .btn a {
+    line-height: 20px;
+    top: 10px;
   }
 
   /* FORM */
@@ -97,6 +106,12 @@
   }
   .achievements h3 {
     font-size: 35px;
+  }
+
+  /* ABOUT */
+  .about .btn a {
+    line-height: 20px;
+    top: 10px;
   }
 
   /* OUR WORK */
@@ -176,6 +191,10 @@
   .number {
     margin-left: 25px;
   }
+  .tools .btn a {
+    line-height: 20px;
+    top: 10px;
+  }
 
   /* PORTFOLIO */
   .portfolio {
@@ -184,8 +203,5 @@
   .filters-container ul {
     flex-wrap: wrap;
     padding: 0;
-  }
-  .gallery-image {
-    left: 27px !important;
   }
 }

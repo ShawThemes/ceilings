@@ -2,7 +2,6 @@
 
 const filters = document.querySelector('.filters-container > ul');
 const imgs = Array.from(document.querySelectorAll('.gallery-image'));
-console.log(filters);
 
 let currentFilter;
 
@@ -102,3 +101,6 @@ filters.addEventListener('click', event => {
   }
   iso.arrange({filter: '.' + event.target.dataset.tag});
 });
+
+/* PORTFOLIO POSITIONING */
+imgs.forEach(el => { el.style.left = '27px'; });
