@@ -130,6 +130,198 @@ input:nth-child(2) {
   background-color: var(--secondary-color);
 }
 
+/* PRELOADER */
+html {
+  overflow: hidden;
+}
+
+.preloader {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 1000;
+}
+.cssload-thecube {
+	width: 45px;
+	height: 45px;
+	margin: 0 auto;
+	margin-top: 350px;
+  position: relative;
+	transform: rotateZ(45deg);
+		-o-transform: rotateZ(45deg);
+		-ms-transform: rotateZ(45deg);
+		-webkit-transform: rotateZ(45deg);
+		-moz-transform: rotateZ(45deg);
+}
+.cssload-thecube .cssload-cube {
+	position: relative;
+	transform: rotateZ(45deg);
+		-o-transform: rotateZ(45deg);
+		-ms-transform: rotateZ(45deg);
+		-webkit-transform: rotateZ(45deg);
+		-moz-transform: rotateZ(45deg);
+}
+.cssload-thecube .cssload-cube {
+	float: left;
+	width: 50%;
+	height: 50%;
+	position: relative;
+	transform: scale(1.1);
+		-o-transform: scale(1.1);
+		-ms-transform: scale(1.1);
+		-webkit-transform: scale(1.1);
+		-moz-transform: scale(1.1);
+}
+.cssload-thecube .cssload-cube:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgb(88,237,185);
+	animation: cssload-fold-thecube 2.76s infinite linear both;
+		-o-animation: cssload-fold-thecube 2.76s infinite linear both;
+		-ms-animation: cssload-fold-thecube 2.76s infinite linear both;
+		-webkit-animation: cssload-fold-thecube 2.76s infinite linear both;
+		-moz-animation: cssload-fold-thecube 2.76s infinite linear both;
+	transform-origin: 100% 100%;
+		-o-transform-origin: 100% 100%;
+		-ms-transform-origin: 100% 100%;
+		-webkit-transform-origin: 100% 100%;
+		-moz-transform-origin: 100% 100%;
+}
+.cssload-thecube .cssload-c2 {
+	transform: scale(1.1) rotateZ(90deg);
+		-o-transform: scale(1.1) rotateZ(90deg);
+		-ms-transform: scale(1.1) rotateZ(90deg);
+		-webkit-transform: scale(1.1) rotateZ(90deg);
+		-moz-transform: scale(1.1) rotateZ(90deg);
+}
+.cssload-thecube .cssload-c3 {
+	transform: scale(1.1) rotateZ(180deg);
+		-o-transform: scale(1.1) rotateZ(180deg);
+		-ms-transform: scale(1.1) rotateZ(180deg);
+		-webkit-transform: scale(1.1) rotateZ(180deg);
+		-moz-transform: scale(1.1) rotateZ(180deg);
+}
+.cssload-thecube .cssload-c4 {
+	transform: scale(1.1) rotateZ(270deg);
+		-o-transform: scale(1.1) rotateZ(270deg);
+		-ms-transform: scale(1.1) rotateZ(270deg);
+		-webkit-transform: scale(1.1) rotateZ(270deg);
+		-moz-transform: scale(1.1) rotateZ(270deg);
+}
+.cssload-thecube .cssload-c2:before {
+	animation-delay: 0.35s;
+		-o-animation-delay: 0.35s;
+		-ms-animation-delay: 0.35s;
+		-webkit-animation-delay: 0.35s;
+		-moz-animation-delay: 0.35s;
+}
+.cssload-thecube .cssload-c3:before {
+	animation-delay: 0.69s;
+		-o-animation-delay: 0.69s;
+		-ms-animation-delay: 0.69s;
+		-webkit-animation-delay: 0.69s;
+		-moz-animation-delay: 0.69s;
+}
+.cssload-thecube .cssload-c4:before {
+	animation-delay: 1.04s;
+		-o-animation-delay: 1.04s;
+		-ms-animation-delay: 1.04s;
+		-webkit-animation-delay: 1.04s;
+		-moz-animation-delay: 1.04s;
+}
+
+@keyframes cssload-fold-thecube {
+	0%, 10% {
+		transform: perspective(84px) rotateX(-180deg);
+		opacity: 0;
+	}
+	25%,
+				75% {
+		transform: perspective(84px) rotateX(0deg);
+		opacity: 1;
+	}
+	90%,
+				100% {
+		transform: perspective(84px) rotateY(180deg);
+		opacity: 0;
+	}
+}
+
+@-o-keyframes cssload-fold-thecube {
+	0%, 10% {
+		-o-transform: perspective(84px) rotateX(-180deg);
+		opacity: 0;
+	}
+	25%,
+				75% {
+		-o-transform: perspective(84px) rotateX(0deg);
+		opacity: 1;
+	}
+	90%,
+				100% {
+		-o-transform: perspective(84px) rotateY(180deg);
+		opacity: 0;
+	}
+}
+
+@-ms-keyframes cssload-fold-thecube {
+	0%, 10% {
+		-ms-transform: perspective(84px) rotateX(-180deg);
+		opacity: 0;
+	}
+	25%,
+				75% {
+		-ms-transform: perspective(84px) rotateX(0deg);
+		opacity: 1;
+	}
+	90%,
+				100% {
+		-ms-transform: perspective(84px) rotateY(180deg);
+		opacity: 0;
+	}
+}
+
+@-webkit-keyframes cssload-fold-thecube {
+	0%, 10% {
+		-webkit-transform: perspective(84px) rotateX(-180deg);
+		opacity: 0;
+	}
+	25%,
+				75% {
+		-webkit-transform: perspective(84px) rotateX(0deg);
+		opacity: 1;
+	}
+	90%,
+				100% {
+		-webkit-transform: perspective(84px) rotateY(180deg);
+		opacity: 0;
+	}
+}
+
+@-moz-keyframes cssload-fold-thecube {
+	0%, 10% {
+		-moz-transform: perspective(84px) rotateX(-180deg);
+		opacity: 0;
+	}
+	25%,
+				75% {
+		-moz-transform: perspective(84px) rotateX(0deg);
+		opacity: 1;
+	}
+	90%,
+				100% {
+		-moz-transform: perspective(84px) rotateY(180deg);
+		opacity: 0;
+	}
+}
+
 /* HEADER / CONTACTS */
 header {
   position: sticky;
@@ -777,102 +969,6 @@ align-items: center;
   z-index: 3;
 }
 
-/* FOOTER */
-footer {
-  display: flex;
-  justify-content: space-around;
-  padding-bottom: 45px;
-  background-color: var(--primary-color);
-}
-
-.footer_links {
-  display: flex;
-  flex-direction: column;
-  margin-top: 30px;
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 60px;
-  letter-spacing: 1px;
-}
-
-.footer_links a:last-of-type {
-  color: var(--secondary-color);
-}
-
-.footer_contacts {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 35%;
-}
-
-.footer_details {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  margin-top: 45px;
-  font-size: 20px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  color: #fff;
-}
-
-.footer_details p {
-  margin: 0;
-}
-
-.footer_whatsapp, .footer_viber {
-  width: 25px;
-  height: 25px;
-  background-image: url('./img/whatsapp.svg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.footer_viber {
-  width: 26px;
-  height: 26px;
-  background-image: url('./img/viber.svg');
-}
-
-.footer_callback {
-  color: #fff;
-}
-
-.footer_callback {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.footer_callback p {
-  margin: 50px 0 0;
-  font-size: 18px;
-  font-weight: 700;
-}
-
-.footer_callback form {
-  margin-top: 20px;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.footer_callback input {
-  width: 220px;
-  margin: 0;
-  margin-top: 10px;
-  padding: 0;
-  font-size: 14px;
-  border-radius: 5px;
-  text-align: center;
-}
-
-.footer_callback .btn {
-  margin-top: 10px;
-}
-
 /* PORTFOLIO */
 .portfolio {
   min-height: 100vh;
@@ -1108,4 +1204,115 @@ li.filter {
 iframe {
   width: 100%;
   height: 100%;
+}
+
+/* FOOTER */
+footer {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 15px;
+  background-color: var(--primary-color);
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer_links {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 60px;
+  letter-spacing: 1px;
+}
+
+.footer_links a:last-of-type {
+  color: var(--secondary-color);
+}
+
+.footer_contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 35%;
+}
+
+.footer_details {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 45px;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+.footer_details p {
+  margin: 0;
+}
+
+.footer_whatsapp, .footer_viber {
+  width: 25px;
+  height: 25px;
+  background-image: url('./img/whatsapp.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.footer_viber {
+  width: 26px;
+  height: 26px;
+  background-image: url('./img/viber.svg');
+}
+
+.footer_callback {
+  color: #fff;
+}
+
+.footer_callback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer_callback p {
+  margin: 50px 0 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.footer_callback form {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.footer_callback input {
+  width: 220px;
+  margin: 0;
+  margin-top: 10px;
+  padding: 0;
+  font-size: 14px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.footer_callback .btn {
+  margin-top: 10px;
+}
+
+.site {
+  margin: 0 auto;
+}
+
+.site p {
+  margin: 0;
+  padding: 50px 0 0 0;
+  color: #fff;
 }

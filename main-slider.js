@@ -6,7 +6,7 @@ $('.main-slider.owl-carousel').owlCarousel({
   nav:false,
   dots:true,
   items: 1,
-  autoplay: false
+  autoplay: true
 })
 
 

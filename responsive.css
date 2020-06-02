@@ -178,6 +178,11 @@
 /* MOBILE (RESPONSIVE 640) */
 @media (max-width: 640px) {
   /* GLOBAL */
+  .cssload-thecube {
+    width: 40px;
+    height: 40px;
+    margin-top: 300px;
+  }
   h2 {
     font-size: 35px;
     letter-spacing: 1px;
