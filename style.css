@@ -181,6 +181,10 @@ header {
   background-color: var(--primary-color);
 }
 
+.menu-button {
+  display: none;
+}
+
 .logo-container {
   width:30%;
 

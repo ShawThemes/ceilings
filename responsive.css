@@ -1,3 +1,116 @@
+:root {
+  --primary-color: #303030;
+  --secondary-color: #58EDB9;
+}
+
+@media (max-width: 1000px) {
+  footer {
+    display: none;
+  }
+  .contacts,
+  .site-description {
+    display: none;
+  }
+
+  header {
+    top: 0;
+  }
+
+  .menu {
+    justify-content: flex-start;
+  }
+
+  .logo {
+    margin-left: 20px;
+  }
+
+  /* MENU BUTTON */
+  .menu-button {
+    display: block;
+    padding: 5px;
+    position: absolute;
+    z-index: 1000;
+    right: 35px;
+    top: 30px;
+    cursor: pointer;
+    transition: all .7s ease-out;
+  }
+
+  .menu-button.close {
+    transform: rotate(180deg);
+  }
+
+  .menu-button .button-line {
+    width: 28px;
+    height: 3px;
+    margin: 0 0 5px 0;
+    background-color: #fff;
+    transition: all .7s ease-out;
+  }
+
+  .menu-button:hover .button-line{
+    background-color: var(--secondary-color);
+  }
+
+  .menu-button.close .button-line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .menu-button.close .button-line:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-button.close .button-line:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+  }
+  nav {
+    position: fixed;
+    width: 100%;
+    box-sizing: border-box;
+    top: 0;
+    transition: all .7s ease-out;
+    display: flex;
+    height: 0;
+  }
+
+  nav.show {
+    height: 100vh;
+  }
+
+  
+  nav ul.menu-list,
+  nav .nav-branding {
+    background-color: rgba(48,48,48,0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: all .7s ease-out;
+    float: right;
+    width: 40%;
+    height: 80vh;
+    margin-top: 0;
+    padding: 50px 2%;
+    box-sizing: border-box;
+    transform: translate3d(0, -100vh, 0);
+  }
+
+
+  nav .nav-branding {
+    width: 60%;
+    float: left;
+    transform: translate3d(0, 100vh, 0);
+    background-color: rgba(48,48,48,0.5);
+  }
+
+  nav.show ul.menu-list,
+  nav.show .nav-branding {
+    transform: translate3d(0, 0, 0);
+    height: 100vh;
+  }
+  nav.show .menu-item {
+    display: inline-block;
+    margin: 30px 0;
+  }
+
+}
 /* MOBILE (RESPONSIVE 640) */
 @media (max-width: 640px) {
   /* GLOBAL */
@@ -20,7 +133,6 @@
 
   /* MENU */
   .contacts,
-  .menu-list,
   .site-description {
     display: none;
   }
