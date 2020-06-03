@@ -3,7 +3,7 @@
   --secondary-color: #58EDB9;
 }
 
-/* MOBILE (RESPONSIVE 1000) */
+/* MOBILE (RESPONSIVE 1300) */
 @media (max-width: 1300px) {
   /* GLOBAL */
   h2 {
@@ -19,6 +19,9 @@
   }
   .menu {
     justify-content: flex-start;
+  }
+  .show {
+    display: block;
   }
   .logo {
     margin-left: 20px;
@@ -214,6 +217,9 @@
   .menu {
     padding-left: 0;
     height: 75px;
+  }
+  .show {
+    display: block;
   }
   .logo-container {
     width: 100%;
