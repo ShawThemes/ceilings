@@ -12,4 +12,4 @@ menuBtn.addEventListener('click', event => {
   } else {
     document.body.parentNode.style.overflowY = 'visible';
   }
-}); 
+});

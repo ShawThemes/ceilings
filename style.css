@@ -427,6 +427,10 @@ nav {
   position: relative;
 }
 
+.show {
+  display: none;
+}
+
 .menu-item::before,
 .features p::before,
 .filter::before {
