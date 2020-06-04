@@ -366,10 +366,7 @@
     margin-top: 10px;
     margin-left: 0;
   }
-  .instagram_gallery:last-child(3){
-    display: none;
-  }
-  
+
   /* CONTACTS */
   .contacts-banner h2 {
     margin: 55px 0 0;
@@ -428,8 +425,12 @@
     width: 100%;
   }
   .instagram .profile_statistics {
-    padding-left: 95px;
+    padding-left: 93px;
     font-size: 11px;
+  }
+  .sbscribe-btn {
+    width: 40%;
+    left: 130px;
   }
   .instagram_profile_image {
     width: 55px;
