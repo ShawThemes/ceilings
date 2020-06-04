@@ -164,28 +164,11 @@
   .footer_links {
     display: none;
   }
-  .footer_contacts {
-    width: 100%;
-  }
   .footer_details {
-    justify-content: space-around;
+    width: 50%;
     font-size: 16px;
     border-bottom: 1px solid var(--secondary-color);
     padding-bottom: 20px;
-  }
-  .footer_details p {
-    width: 20%;
-  }
-  .footer_callback {
-    width: 100%;
-    align-items: unset;
-  }
-  .footer_callback form {
-    justify-content: space-around;
-  }
-  .footer_callback p {
-    text-align: center;
-    font-size: 16px;
   }
 }
 
@@ -341,31 +324,17 @@
   .footer_links {
     display: none;
   }
-  .footer_contacts {
-    width: 100%;
-  }
   .footer_details {
-    justify-content: space-around;
-    font-size: 14px;
-    border-bottom: 1px solid var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding-bottom: 20px;
-  }
-  .footer_details p {
-    width: 20%;
-  }
-  .footer_callback {
-    width: 100%;
-    align-items: unset;
-  }
-  .footer_callback form {
-    justify-content: space-around;
-  }
-  .footer_callback p {
     font-size: 14px;
+    line-height: 35px;
+    border-bottom: 1px solid var(--secondary-color);
   }
-  .footer_callback input,
-  .footer_callback .btn {
-    width: 40%;
+  .social a {
+    margin-top: 10px;
   }
   
   /* CONTACTS */
@@ -444,7 +413,7 @@
     margin: 50px 0 50px;
   }
   .insta_account-container,
-  .btn {
+  .insta_description .btn {
     display: none;
   }
 
