@@ -138,6 +138,9 @@
   .instagram h2 {
     font-size: 50px;
   }
+  .sbscribe-btn {
+    left: 155px;
+  }
 
   /* PORTFOLIO */
   .portfolio {
@@ -164,11 +167,17 @@
   .footer_links {
     display: none;
   }
+  .footer-container {
+    justify-content: center;
+  }
   .footer_details {
     width: 50%;
     font-size: 16px;
     border-bottom: 1px solid var(--secondary-color);
     padding-bottom: 20px;
+  }
+  .footer_tel {
+    width: 30%;
   }
 }
 
@@ -176,6 +185,22 @@
 @media (max-width: 800px) {
   .instagram h2 {
     font-size: 40px;
+  }
+  .insta_description .highlighted::after {
+    width: 100%;
+  }
+  .instagram_profile_image {
+    width: 60px;
+    height: 60px;
+  }
+  .instagram .profile_statistics {
+    padding-left: 100px;
+  }
+  .instagram_username {
+    margin-top: 35px;
+  }
+  .sbscribe-btn {
+    left: 140px;
   }
 }
 
@@ -333,8 +358,16 @@
     line-height: 35px;
     border-bottom: 1px solid var(--secondary-color);
   }
+  .social {
+    width: 100%;
+    justify-content: space-evenly;
+  }
   .social a {
     margin-top: 10px;
+    margin-left: 0;
+  }
+  .instagram_gallery:last-child(3){
+    display: none;
   }
   
   /* CONTACTS */
