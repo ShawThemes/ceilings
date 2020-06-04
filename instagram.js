@@ -11,9 +11,10 @@ document.addEventListener('DOMContentLoaded', () => {
         'display_gallery': true,
         'callback': null,
         'styling': false,
-        'items': 6,
+        'items': 9,
         'items_per_row': 3,
         'margin': 1
     });
   })();
+
 });
