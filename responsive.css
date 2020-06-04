@@ -366,6 +366,9 @@
     margin-top: 10px;
     margin-left: 0;
   }
+  .footer_tel {
+    width: 75%;
+  }
 
   /* CONTACTS */
   .contacts-banner h2 {
