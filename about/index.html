@@ -70,7 +70,7 @@
     <div class="achievements-list">
       <div class="achievements-item">
         <img class="achievements-img" src="../img/production.svg" alt="Наши клиенты">
-        <p class="primary-text">Изготавливаем</p class="primary-text">
+        <p class="primary-text">Изготавливаем</p>
       </div>
       <div class="achievements-item">
         <img class="achievements-img" src="../img/truck.svg" alt="Календарь">
@@ -108,7 +108,6 @@
   </section>
 
   <section class="instagram">
-
     <div class="insta_container">
       <div class="profile_statistics">
         <div class="publications">
@@ -128,7 +127,7 @@
       <div id="instafeed"></div>
     </div>
     <div class="insta_description">
-      <h2>Наш <span class="highlighted"> Instagram</span c></h2>
+      <h2>Наш <span class="highlighted"> Instagram</span></h2>
       <div class="insta_account-container">
         <img src="../img/instagram-sketched.svg" alt="Наш инстаграм" class="insta-icon">
         <a class="insta_account" href="https://www.instagram.com/potolki_79bir/?hl=ru" target="_blank">potolki_79bir</a>
@@ -174,18 +173,18 @@
    <!-- FORM -->
    <section class="form">
     <h3 class="center-title">Запишитесь на <span class="highlighted">бесплатный</span> замер</h3>
-    <form action="">
+    <form id="submitForm" enctype="multipart/form-data" method="post">
       <div>
         <label>
-          <input type="text" placeholder="Ваше имя">
+          <input name="firstName" type="text" placeholder="Ваше имя">
           <span></span>
         </label>
         <label>
-          <input type="phone" placeholder="Ваш телефон">
+          <input id="inputmask" name="phone" type="phone" placeholder="Ваш телефон">
           <span></span>
         </label>
       </div>
-      <button type="submit" class="btn btn--uppercase">
+      <button type="submit" form="submitForm" class="btn btn--uppercase">
         <span>Записаться</span> 
         <div class="ripple"></div>
       </button>
@@ -214,10 +213,12 @@
   </footer>
   
   <script src="../libs/OwlCarousel2-2.3.4/dist/owl.carousel.min.js" defer></script>
+  <script src="./libs/Inputmask/dist/inputmask.js" defer></script>
   <script src="../about-slider.js" defer></script>
   <script src="../preloader.js"></script>
   <script src="../menu.js" defer></script>
   <script src="../libs/InstagramFeed.min.js" defer></script>
   <script src="../instagram.js" defer></script>
+  <script src="../main.js"></script>
 </body>
 </html>

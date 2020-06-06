@@ -108,18 +108,18 @@
     <!-- FORM -->
     <section class="form">
       <h3 class="center-title">Запишитесь на <span class="highlighted">бесплатный</span> замер</h3>
-      <form action="">
+      <form id="submitForm" enctype="multipart/form-data" method="post">
         <div>
           <label>
-            <input type="text" placeholder="Ваше имя">
+            <input name="firstName" type="text" placeholder="Ваше имя">
             <span></span>
           </label>
           <label>
-            <input type="phone" placeholder="Ваш телефон">
+            <input id="inputmask" name="phone" type="phone" placeholder="Ваш телефон">
             <span></span>
           </label>
         </div>
-        <button type="submit" class="btn btn--uppercase">
+        <button type="submit" form="submitForm" class="btn btn--uppercase">
           <span>Записаться</span> 
           <div class="ripple"></div>
         </button>
@@ -148,8 +148,10 @@
   </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" crossorigin="anonymous" defer></script>
+  <script src="../libs/Inputmask/dist/inputmask.js" defer></script>
   <script src="../parallax.js" defer></script>
   <script src="../preloader.js"></script>
   <script src="../menu.js" defer></script>
+  <script src="../main.js"></script>
 </body>
 </html>

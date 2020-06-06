@@ -111,20 +111,20 @@
   <!-- FORM -->
   <section class="form">
     <h3 class="center-title">Запишитесь на <span class="highlighted">бесплатный</span> замер</h3>
-    <form action="">
+    <form class="homepage-form" id="submitForm" enctype="multipart/form-data" method="post">
       <div>
         <label>
-          <input type="text" placeholder="Ваше имя">
+          <input name="firstName" type="text" placeholder="Ваше имя">
           <span></span>
         </label>
         <label>
-          <input type="phone" placeholder="Ваш телефон">
+          <input name="phone" id="inputmask" type="phone" placeholder="Ваш телефон">
           <span></span>
         </label>
       </div>
       <button type="submit" class="btn btn--uppercase">
         <span>Записаться</span> 
-        <div class="ripple"></div>
+        <div form="submitForm" class="ripple"></div>
       </button>
     </form>
   </section>
@@ -138,7 +138,7 @@
         <h3 class="achievements-count">
           <span class="highlighted"><span class="count">3000</span>+</span>
         </h3>
-        <p class="primary-text">довольных клиентов</p class="primary-text">
+        <p class="primary-text">довольных клиентов</p>
       </div>
       <div class="achievements-item">
         <img class="achievements-img" src="./img/year.svg" alt="Календарь">
@@ -228,6 +228,7 @@
   <script src="./libs/OwlCarousel2-2.3.4/dist/owl.carousel.min.js" defer></script>
   <script src="./libs/jquery-spincrement/jquery.spincrement.min.js" defer></script>
   <script src="./libs/simpleParallax.js/dist/simpleParallax.min.js" defer></script>
+  <script src="./libs/Inputmask/dist/inputmask.js" defer></script>
   <script src="main.js" defer></script>
   <script src="main-slider.js" defer></script>
   <script src="menu.js" defer></script>
