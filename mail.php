@@ -1,5 +1,4 @@
 <?php
-// Файлы phpmailer
 require 'phpmailer/PHPMailer.php';
 require 'phpmailer/SMTP.php';
 require 'phpmailer/Exception.php';
@@ -9,11 +8,18 @@ $name = $_POST['firstName'];
 $phone = $_POST['phone'];
 
 // Формирование самого письма
-$title = "Заголовок письма";
+$title = "Мат & Глянец";
 $body = "
-<h2>Новое письмо</h2>
-<b>Имя:</b> $name<br>
-<b>Почта:</b> $phone<br><br>
+<div style='background-color: #e9e9e9; padding: 20px;'>
+  <div style='border-bottom: 3px solid #58EDB9;'>
+    <h2 style='font-size: 20px;'>Новая запись на бесплатный замер</h2>
+  </div>
+  <br><br>
+  <b>Имя клиента:</b> $name<br>
+  <b>Телефон клиента:</b>
+  <a href='tel:$phone'style='text-decoration: none; color: #000;'>$phone</a>
+  <br><br>
+</div>
 ";
 
 // Настройки PHPMailer

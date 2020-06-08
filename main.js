@@ -48,9 +48,8 @@ function send(event, php){
   req.onload = function() {
 	if (req.status >= 200 && req.status < 400) {
 	let json = JSON.parse(this.response);
-    	console.log(json);
       if (json.result == "success") {
-    	alert("Сообщение отправлено");
+    	alert("Спасибо! Ваше сообщение отправлено!");
     } else {
     	alert("Ошибка. Сообщение не отправлено");
     	}
