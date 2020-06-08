@@ -640,8 +640,6 @@ justify-content: flex-end;
   50% { border-color: var(--secondary-color); }
 }
 
-
-
 .owl-dots {
   width: 100%;
   display: flex;
@@ -687,6 +685,16 @@ justify-content: flex-end;
   width: 50%;
   padding-left: 5%;
   padding-right: 20px;
+}
+
+.main_text-container h2 {
+  margin-bottom: 0;
+}
+
+.main_text-container h3 {
+  margin: 10px 0 60px 0;
+  font-size: 28px;
+  letter-spacing: 0;
 }
 
 #main img {
