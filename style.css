@@ -1163,6 +1163,35 @@ li.filter {
   font-weight: 400;
 } */
 
+/* ADVANTAGES */
+.advantages {
+  padding-bottom: 80px;
+}
+
+.advantages h2 {
+  margin-bottom: 40px;
+}
+
+.advantages-img {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  margin-right: 20px;
+  color: #000;
+}
+
+.round::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+  transform: translate(10px, -25px);
+  position: relative;
+  z-index: -1;
+}
+
 /* HOW */
 .how {
   padding: 0;
