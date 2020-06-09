@@ -1,5 +1,21 @@
 'use strict';
 
+/* SCROLL TO TOP */
+const scrollBtn = document.querySelector('.up-btn');
+const header  = document.querySelector('header');
+scrollBtn.addEventListener('click', event => {
+  event.preventDefault();
+  if (event.target.dataset.id) {
+    let top = header.offsetTop;
+  }
+
+  window.scrollTo({
+    top: top,
+    behavior: 'smooth'
+  });
+})
+
+
 /* INCREMENTING EFFECT*/
 function countup(className){
   let element = $("."+className);
