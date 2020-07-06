@@ -4,7 +4,7 @@ const filters = document.querySelector('.filters-container > ul');
 let images = [], showingImages = [], iso, currentFilter;
 
 /* FETCHING DATA */
-fetch('/imagesdata.json')
+fetch(window.location.origin +'/imagesdata.json')
   .then(res => res.json())
   .then(data => {
     gallery.innerHTML = data.map((el) => `
