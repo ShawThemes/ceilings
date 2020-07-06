@@ -13,7 +13,7 @@ scrollBtn.addEventListener('click', event => {
     top: top,
     behavior: 'smooth'
   });
-})
+});
 
 
 /* INCREMENTING EFFECT*/
@@ -37,7 +37,11 @@ function countup(className){
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  countup("count", $(".count").text());
+  const counter = document.querySelector('.count');
+  if (!counter) {
+    return;
+  }
+  countup("count");
 });
 
 

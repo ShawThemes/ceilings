@@ -11,7 +11,7 @@ $('.main-slider.owl-carousel').owlCarousel({
 
 
 $('.services-list.owl-carousel').owlCarousel({
-  loop:true,
+  loop:false,
   margin:20,
   nav:false,
   dots:true,
