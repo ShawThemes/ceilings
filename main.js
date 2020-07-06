@@ -16,35 +16,6 @@ scrollBtn.addEventListener('click', event => {
 });
 
 
-/* INCREMENTING EFFECT*/
-function countup(className){
-  let element = $("."+className);
-  if (element) {
-    let achievements = element.offsetTop;
-    let windowHeight = window.innerHeight;
-    let show = true;
-          
-    jQuery(window).scroll( function (){
-      if(show && (achievements < $(window).scrollTop() + windowHeight)){ 
-        show = false;
-        jQuery('.'+className).spincrement({
-          from: 1,
-          duration: 5000,
-        });
-      }
-    })
-  }
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-  const counter = document.querySelector('.count');
-  if (!counter) {
-    return;
-  }
-  countup("count");
-});
-
-
 /* PARALLAX EFFECT FOR HOME SECTION */
 const workSectionBanner = document.querySelector('.work-bcg__image');
 if (workSectionBanner) {
